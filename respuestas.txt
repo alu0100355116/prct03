@@ -1,0 +1,116 @@
+18. Escriba el programa que muestra por la consola la frase
+"Hola Mundo". ¿Que significado tiene la salida? (puts ’Hola Mundo’)
+
+La salida es nula => nil
+
+21. ¿Que diferencia hay entre "\t\n" y  ’\t\n’?
+
+Comillas simples: Inerpreta literalmente
+Comillas dobles: Busca posibles sustituciones e interpolaciones
+
+22. ¿Cómo funciona %q?  
+
+Funciona de forma parecida a unas comillas simples
+
+¿Qué es %q{hello world\n}?
+
+La salida sería hello world\n.
+
+¿Qué es %q{’a’ ’b’ ’c’}?
+
+La salida sería 'a' 'b' 'c'.
+
+23. ¿Cómo funciona %Q?
+
+Funciona de forma parecida a unas comillas dobles.
+
+¿Qué es %Q{hello world\n}?
+
+La salida sería hello world e insertaria un retorno de carro.
+
+¿Qué es %Q{"a" "b" "c"}?
+
+La salida sería a b c "a" "b" "c"
+
+4. ¿Qué queda en c?
+
+irb(main):001:0> a = 4
+=> 4
+irb(main):002:0> b =2
+=> 2
+irb(main):003:0> c = <<HERE
+irb(main):004:0" --#{a}--
+irb(main):005:0" --#{b}--
+irb(main):006:0" HERE
+
+En c quedaría --#{4}--
+	      --#{2}--
+ya que por defecto en este caso, el HERE es como si fuera "HERE" e interpola el valor de las
+variables.
+
+25. ¿Qué queda en c?
+
+irb(main):001:0> a = 4
+=> 4
+irb(main):002:0> b =2
+=> 2
+irb(main):008:0> c = <<’HERE’
+irb(main):009:0’ --#{a}--
+irb(main):010:0’ --#{b}--
+irb(main):011:0’ HERE
+
+En c quedaría --#{a}--
+	      --#{b}--
+ya que le estamos indicando en el HERE que no queremos interpolar y guarda literalmente.
+
+26.s = "hello". ¿Cuál es el valor de las siguientes expresiones?
+
+s[0,2]  El valor sería "he"
+
+s[-1,1] El valor sería "o"
+
+s[0,10] El valo sería "hello"
+
+27. ¿Qué queda en g?
+
+>> g = "hello"
+=> "hello"
+>> g << " world"
+
+En g quedaría hello world, ya que con << concatenamos al final
+
+28. ¿Qué queda en e?
+
+>> e = ’.’*3
+
+Nos dice que el punto lo repetimos 3 veces, asi que nos queda e = '...'
+
+29. ¿Cuál es el resultado?
+
+>> a = 1
+=> 1
+>> "#{a=a+1} "*3
+
+Como las tenemos entre comillas dobles interpretamos la expresion y luego al valor resultado
+lo concatena 3 veces
+
+30. ¿Qué es esto?
+
+%w[this is a test]
+
+Crea un array con cada elemento e interpola
+
+31. ¿Qué es esto?
+
+%w[\t \n]
+
+Lo mismo que el anterior crea un array de dimension dos donde interpola un tabulador y un salto de linea.
+
+
+
+
+
+
+
+
+
